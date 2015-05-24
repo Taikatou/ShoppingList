@@ -11,6 +11,7 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -122,6 +123,12 @@ public class MainActivity extends ActionBarActivity {
                 mProgress.setProgress((100 / amount) * limit);
             }
         }
+        else
+        {
+            Toast.makeText(getApplicationContext(),
+                    "Reached maximum of " + amount + " in list", Toast.LENGTH_LONG).show();
+        }
+
 
     }
 
