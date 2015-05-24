@@ -112,7 +112,7 @@ public class MainActivity extends ActionBarActivity {
 
     public void onAddItem(View v) {
 
-        if(limit < 20) {
+        if(limit < amount) {
             EditText etNewItem = (EditText) findViewById(R.id.etNewItem);
             String itemText = etNewItem.getText().toString();
             if(itemText.length() > 0) {
