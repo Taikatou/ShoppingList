@@ -40,7 +40,7 @@ public class MainActivity extends ActionBarActivity {
         items.add("Milk");
         limit = 2;
         amount = 20;
-        mProgress.setProgress((100 / amount) * limit);
+        mProgress.setProgress((limit * 100) / amount);
         // Setup remove listener method call
         setupListViewListener();
 
@@ -84,7 +84,7 @@ public class MainActivity extends ActionBarActivity {
         else {
             amount = 20;
         }
-        mProgress.setProgress((100 / amount) * limit);
+        mProgress.setProgress((limit * 100) / amount);
 
     }
 
@@ -100,7 +100,7 @@ public class MainActivity extends ActionBarActivity {
                         // Refresh the adapter
                         itemsAdapter.notifyDataSetChanged();
                         limit -= 1;
-                        mProgress.setProgress((100 / amount) * limit);
+                        mProgress.setProgress((limit * 100) / amount);
                         // Return true consumes the long click event (marks it handled)
                         return true;
                     }
@@ -118,11 +118,9 @@ public class MainActivity extends ActionBarActivity {
                 itemsAdapter.add(itemText);
                 etNewItem.setText("");
                 limit++;
-                if(limit != amount)
-                    mProgress.setProgress((100 / amount) * limit);
+                mProgress.setProgress((limit * 100) / amount);
 
-                else
-                    mProgress.setProgress(100);
+
             }
         }
         else {
