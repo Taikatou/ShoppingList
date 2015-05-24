@@ -79,10 +79,9 @@ public class MainActivity extends ActionBarActivity {
             {
                 amount = 20;
             }
-            mProgress.setProgress((100 / amount) * limit);
         }
         else {
-            //..oops!
+            amount = 20;
         }
         mProgress.setProgress((100 / amount) * limit);
 
