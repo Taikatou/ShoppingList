@@ -43,6 +43,7 @@ public class MainActivity extends ActionBarActivity {
         mProgress.setProgress((100 / amount) * limit);
         // Setup remove listener method call
         setupListViewListener();
+
     }
 
 
