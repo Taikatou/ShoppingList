@@ -23,7 +23,7 @@ public class MainActivity extends ActionBarActivity {
     private ListView lvItems;
     private int limit;
     private ProgressBar mProgress;
-    public int amount;
+    protected int amount;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -118,7 +118,11 @@ public class MainActivity extends ActionBarActivity {
                 itemsAdapter.add(itemText);
                 etNewItem.setText("");
                 limit++;
-                mProgress.setProgress((100 / amount) * limit);
+                if(limit != amount)
+                    mProgress.setProgress((100 / amount) * limit);
+
+                else
+                    mProgress.setProgress(100);
             }
         }
         else {

@@ -22,16 +22,7 @@ public class SettingsActivity extends Activity {
         np = (NumberPicker) findViewById(R.id.numberPicker);
         np.setMaxValue(120);
         np.setMinValue(5);
-        Bundle extras = getIntent().getExtras();
-        if (extras != null)
-        {
-            amount = Integer.parseInt(extras.getString("amount"));
-        }
-        else
-        {
-            amount = 1;
-        }
-        np.setValue(amount);
+        np.setValue(20);
 
     }
 
