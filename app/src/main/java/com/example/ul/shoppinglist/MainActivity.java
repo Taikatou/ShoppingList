@@ -73,8 +73,7 @@ public class MainActivity extends ActionBarActivity {
     protected void onResume() {
         super.onResume();
         Bundle extras = getIntent().getExtras();
-        if (extras != null)
-        {
+        if (extras != null) {
             amount = Integer.parseInt(extras.getString("amount"));
             if(amount <= 0)
             {
@@ -82,8 +81,7 @@ public class MainActivity extends ActionBarActivity {
             }
             mProgress.setProgress((100 / amount) * limit);
         }
-        else
-        {
+        else {
             //..oops!
         }
         mProgress.setProgress((100 / amount) * limit);
@@ -123,8 +121,7 @@ public class MainActivity extends ActionBarActivity {
                 mProgress.setProgress((100 / amount) * limit);
             }
         }
-        else
-        {
+        else {
             Toast.makeText(getApplicationContext(),
                     "Reached maximum of " + amount + " in list", Toast.LENGTH_LONG).show();
         }
